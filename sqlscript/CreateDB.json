@@ -1,0 +1,17 @@
+{
+	"name": "CreateDB",
+	"properties": {
+		"content": {
+			"query": "-- Delete database if it exists\n\nIF EXISTS (SELECT name from sys.databases WHERE name = 'MyProjectsDB')\nDROP DATABASE MyProjectsDB;\n\n-- Create database\nCREATE DATABASE MyProjectsDB;\n\n/*\n    A master key in SQL is used to encrypt sensitive data, such as credentials, to ensure secure access. \n    It is required for operations like creating database-scoped credentials. \n    By creating a master key, you enable encryption for securely storing and accessing credentials \n    or other sensitive information within the database.\n*/\n\n-- Create the master key for encryption\nCREATE MASTER KEY ENCRYPTION BY PASSWORD = 'MyS3cureP@ssw0rd!';\n\n/*\n    A SAS token grants time-limited access to specific Azure storage resources \n    without exposing the account key,\n    allowing external apps or users to access resources with defined permissions.\n*/\n\n-- Create a database-scoped credential for accessing datalake\nCREATE DATABASE SCOPED CREDENTIAL myStorageCred\nWITH IDENTITY = 'SHARED ACCESS SIGNATURE',\nSECRET = '&sr=c&sig=eb9Qee0ACuFPNGl6r0lcpPPyxc87u9sZHp%2FaZBBU6kw%3D';\n\n\nCREATE EXTERNAL DATA SOURCE ExternalDataLakeStoreProj\nWITH (\n    LOCATION = 'https://projectsstore1.blob.core.windows.net/synapse-proj-files/'\n    CREDENTIAL = myStorageCred\n);\n\n\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "/*\n2.1 Create External Data Source\n\n    The external data source connects Synapse Analytics with your Azure Data Lake Storage.\n    We need to specify the location and credentials.\n\n*/\n\n-- SELECT * FROM sys.database_scoped_credentials;\n\n\nCREATE EXTERNAL DATA SOURCE ExternalDataLakeStore\nWITH (\n\n    LOCATION = 'https://projectsstore1.blob.core.windows.net/synapse-proj-files/',\n    CREDENTIAL = myStorageCred\n);\n\n\n/*\n2.2 Create External File Format\n\n    Now, create the file format to specify the format of the CSV files (Delimited format for CSV).\n\n*/\n\n-- Create an external file format for DELIMITED CSV files using FORMAT_OPTIONS\nCREATE EXTERNAL FILE FORMAT CsvFormat\nWITH (\n    FORMAT_TYPE = DELIMITEDTEXT,\n    FORMAT_OPTIONS (\n        FIELD_TERMINATOR = ',',\n        FIRST_ROW = 2 -- Skip the header row\n    )\n);\n\n-- DROP EXTERNAL FILE FORMAT CsvFormat\n\n\n/* 2.3 Create External Tables\n\nCreate external tables for both the matches and the deliveries datasets using the defines schema.\n\n*/\nCREATE EXTERNAL TABLE matches (\n    id INT,\n    season NVARCHAR(50),\n    city NVARCHAR(50),\n    date DATE,\n    match_type NVARCHAR(50),\n    player_of_match NVARCHAR(100),\n    venue NVARCHAR(100),\n    team1 NVARCHAR(50),\n    team2 NVARCHAR(50),\n    toss_winner NVARCHAR(50),\n    toss_decision NVARCHAR(50),\n    winner NVARCHAR(50),\n    result NVARCHAR(50),\n    result_margin INT,\n    target_runs NVARCHAR(50),\n    target_overs NVARCHAR(50),\n    super_over NVARCHAR(50),\n    method NVARCHAR(50),\n    umpire1 NVARCHAR(50),\n    umpire2 NVARCHAR(50)\n) \nWITH (\n    LOCATION = 'matches/*.csv',\n    DATA_SOURCE = ExternalDataLakeStore,\n    FILE_FORMAT = CsvFormat\n);\n\n\nCREATE EXTERNAL TABLE deliveries(\n    match_id INT,\n    inning INT,\n    batting_team NVARCHAR(100),\n    bowling_team NVARCHAR(100),\n    over_ INT,\n    ball INT,\n    batter NVARCHAR(100),\n    bowler NVARCHAR(100),\n    non_striker NVARCHAR(100),\n    batsman_runs INT,\n    extra_runs INT,\n    total_runs INT,\n    extras_type NVARCHAR(100),\n    is_wicket INT,\n    player_dismissed NVARCHAR(100),\n    dismissal_kind NVARCHAR(100),\n    fielder NVARCHAR(100)\n)\nWITH (\n    LOCATION = 'deliveries/*.csv',\n    DATA_SOURCE = ExternalDataLakeStore,\n    FILE_FORMAT = CsvFormat\n);\n\n\nSELECT * FROM sys.external_data_sources;\n\nSELECT TOP 10 * FROM matches;\n\n\n-- DROP EXTERNAL DATA SOURCE ExternalDataLakeStore\n-- DROP EXTERNAL TABLE matches \n-- DROP EXTERNAL TABLE deliveries;\n\n-- https://projectsstore1.blob.core.windows.net/synapse-proj-files\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "MyProjectsDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
