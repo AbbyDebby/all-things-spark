@@ -18,319 +18,16 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "8d97b7be-70b6-4569-8cbf-cf8471063de2"
+				"spark.autotune.trackingId": "0a4ffded-ab1c-4502-835b-35df7fe06772"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1",
-				"state": {
-					"1c547183-b237-4417-8d0a-7c34ecc6f02d": {
-						"type": "Synapse.DataFrame",
-						"sync_state": {
-							"table": {
-								"rows": [
-									{
-										"0": "match_id",
-										"1": "inning",
-										"2": "batting_team",
-										"3": "bowling_team",
-										"4": "over",
-										"5": "ball",
-										"6": "batter",
-										"7": "bowler",
-										"8": "non_striker",
-										"9": "batsman_runs",
-										"10": "extra_runs",
-										"11": "total_runs",
-										"12": "extras_type",
-										"13": "is_wicket",
-										"14": "player_dismissed",
-										"15": "dismissal_kind",
-										"16": "fielder"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "1",
-										"6": "SC Ganguly",
-										"7": "P Kumar",
-										"8": "BB McCullum",
-										"9": "0",
-										"10": "1",
-										"11": "1",
-										"12": "legbyes",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "2",
-										"6": "BB McCullum",
-										"7": "P Kumar",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "0",
-										"11": "0",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "3",
-										"6": "BB McCullum",
-										"7": "P Kumar",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "1",
-										"11": "1",
-										"12": "wides",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "4",
-										"6": "BB McCullum",
-										"7": "P Kumar",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "0",
-										"11": "0",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "5",
-										"6": "BB McCullum",
-										"7": "P Kumar",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "0",
-										"11": "0",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "6",
-										"6": "BB McCullum",
-										"7": "P Kumar",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "0",
-										"11": "0",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "0",
-										"5": "7",
-										"6": "BB McCullum",
-										"7": "P Kumar",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "1",
-										"11": "1",
-										"12": "legbyes",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "1",
-										"5": "1",
-										"6": "BB McCullum",
-										"7": "Z Khan",
-										"8": "SC Ganguly",
-										"9": "0",
-										"10": "0",
-										"11": "0",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									},
-									{
-										"0": "335982",
-										"1": "1",
-										"2": "Kolkata Knight Riders",
-										"3": "Royal Challengers Bangalore",
-										"4": "1",
-										"5": "2",
-										"6": "BB McCullum",
-										"7": "Z Khan",
-										"8": "SC Ganguly",
-										"9": "4",
-										"10": "0",
-										"11": "4",
-										"13": "0",
-										"14": "NA",
-										"15": "NA",
-										"16": "NA"
-									}
-								],
-								"schema": [
-									{
-										"key": "0",
-										"name": "_c0",
-										"type": "string"
-									},
-									{
-										"key": "1",
-										"name": "_c1",
-										"type": "string"
-									},
-									{
-										"key": "2",
-										"name": "_c2",
-										"type": "string"
-									},
-									{
-										"key": "3",
-										"name": "_c3",
-										"type": "string"
-									},
-									{
-										"key": "4",
-										"name": "_c4",
-										"type": "string"
-									},
-									{
-										"key": "5",
-										"name": "_c5",
-										"type": "string"
-									},
-									{
-										"key": "6",
-										"name": "_c6",
-										"type": "string"
-									},
-									{
-										"key": "7",
-										"name": "_c7",
-										"type": "string"
-									},
-									{
-										"key": "8",
-										"name": "_c8",
-										"type": "string"
-									},
-									{
-										"key": "9",
-										"name": "_c9",
-										"type": "string"
-									},
-									{
-										"key": "10",
-										"name": "_c10",
-										"type": "string"
-									},
-									{
-										"key": "11",
-										"name": "_c11",
-										"type": "string"
-									},
-									{
-										"key": "12",
-										"name": "_c12",
-										"type": "string"
-									},
-									{
-										"key": "13",
-										"name": "_c13",
-										"type": "string"
-									},
-									{
-										"key": "14",
-										"name": "_c14",
-										"type": "string"
-									},
-									{
-										"key": "15",
-										"name": "_c15",
-										"type": "string"
-									},
-									{
-										"key": "16",
-										"name": "_c16",
-										"type": "string"
-									}
-								],
-								"truncated": false
-							},
-							"isSummary": false,
-							"language": "scala",
-							"wranglerEntryContext": {
-								"dataframeType": "pyspark"
-							}
-						},
-						"persist_state": {
-							"view": {
-								"type": "details",
-								"chartOptions": {
-									"chartType": "bar",
-									"aggregationType": "count",
-									"categoryFieldKeys": [
-										"0"
-									],
-									"seriesFieldKeys": [
-										"0"
-									],
-									"isStacked": false
-								}
-							}
-						}
-					}
-				}
-			},
 			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
 			"language_info": {
 				"name": "python"
 			},
@@ -341,18 +38,30 @@
 				"endpoint": "https://synapse-workspace-projects.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/calebspool",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.4",
 				"nodeCount": 10,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
 		"cells": [
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"Start spark session"
+				]
+			},
 			{
 				"cell_type": "code",
 				"metadata": {
@@ -371,7 +80,35 @@
 					"spark = SparkSession.builder.appName(\"IPL Data Analysis\").getOrCreate()\r\n",
 					"spark"
 				],
-				"execution_count": 3
+				"execution_count": 4
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"#### **Data Loading**\r\n",
+					"\r\n",
+					"This two datasets - **deliveries** and **matches** from Azure Data Lake Storage into Spark DataFrames. The data is stored in CSV format, and the `header=True` parameter ensures that column names from the files are retained.\r\n",
+					"\r\n",
+					"###### ETL Pipeline Phase\r\n",
+					"This code represents the **Extract** phase of the ETL (Extract, Transform, Load) pipeline. Data is being extracted from a cloud-based storage system (Azure Data Lake) into Spark for further processing.\r\n",
+					"\r\n",
+					"###### Data Source\r\n",
+					"The data is sourced from an Azure Data Lake Storage Gen2 container, specifically from the following paths:\r\n",
+					"- Deliveries dataset: `abfss://synapse-proj-files@projectsstore1.dfs.core.windows.net/deliveries/deliveries.csv`\r\n",
+					"- Matches dataset: `abfss://synapse-proj-files@projectsstore1.dfs.core.windows.net/matches/matches.csv`\r\n",
+					"\r\n",
+					"This approach is typical in cloud-based big data engineering workflows, where raw data is extracted for further transformation and analysis.\r\n",
+					"\r\n",
+					"\r\n",
+					""
+				]
 			},
 			{
 				"cell_type": "code",
@@ -382,9 +119,11 @@
 					"deliveries = spark.read.load('abfss://synapse-proj-files@projectsstore1.dfs.core.windows.net/deliveries/deliveries.csv', format='csv'\r\n",
 					", header=True\r\n",
 					")\r\n",
-					"display(df.limit(5))"
+					"matches = spark.read.load('abfss://synapse-proj-files@projectsstore1.dfs.core.windows.net/matches/matches.csv', format='csv'\r\n",
+					", header=True\r\n",
+					")"
 				],
-				"execution_count": 4
+				"execution_count": 5
 			},
 			{
 				"cell_type": "code",
@@ -419,7 +158,8 @@
 				},
 				"source": [
 					""
-				]
+				],
+				"execution_count": null
 			}
 		]
 	}
